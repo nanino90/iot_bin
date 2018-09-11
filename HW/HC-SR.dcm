@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP HC-SR04
+D Ultrasonic TOF proximity sensor
+K proximity
+$ENDCMP
+#
+#End Doc Library

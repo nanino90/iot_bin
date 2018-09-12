@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:iotbin-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,36 +14,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L ESP8266:ESP-12E U1
-U 1 1 5B94CA58
-P 4350 3200
-F 0 "U1" H 4350 3965 50  0000 C CNN
-F 1 "ESP-12E" H 4350 3874 50  0000 C CNN
-F 2 "RF_Module:ESP-12E" H 4350 3200 50  0001 C CNN
-F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 4350 3200 50  0001 C CNN
-	1    4350 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L HC-SR:HC-SR04 U2
-U 1 1 5B94D24D
-P 7000 2450
-F 0 "U2" H 6622 2240 50  0000 R CNN
-F 1 "HC-SR04" H 6622 2149 50  0000 R CNN
-F 2 "HC-SR:HC-SR04_flat_down" H 6850 2600 50  0001 C CNN
-F 3 "" H 6850 2600 50  0001 C CNN
-	1    7000 2450
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 3100 6700 3100
 Wire Wire Line
 	6700 3100 6700 2950
 Wire Wire Line
 	6800 2950 6800 3200
-Wire Wire Line
-	6800 3200 5250 3200
 $Comp
 L power:GND #PWR0101
 U 1 1 5B94D489
@@ -54,25 +29,6 @@ F 3 "" H 6600 2950 50  0001 C CNN
 	1    6600 2950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x04_Male J1
-U 1 1 5B94D633
-P 5500 2050
-F 0 "J1" V 5560 2190 50  0000 L CNN
-F 1 "Conn_01x04_Male" V 5651 2190 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5500 2050 50  0001 C CNN
-F 3 "~" H 5500 2050 50  0001 C CNN
-	1    5500 2050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5400 2250 5400 2900
-Wire Wire Line
-	5400 2900 5250 2900
-Wire Wire Line
-	5500 2250 5500 3000
-Wire Wire Line
-	5500 3000 5250 3000
 Text Label 5600 2400 0    50   ~ 0
 5V
 Wire Wire Line
@@ -153,55 +109,25 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0105
 U 1 1 5B94F35D
-P 5300 2250
-F 0 "#PWR0105" H 5300 2000 50  0001 C CNN
-F 1 "GND" H 5305 2077 50  0000 C CNN
-F 2 "" H 5300 2250 50  0001 C CNN
-F 3 "" H 5300 2250 50  0001 C CNN
-	1    5300 2250
+P 5200 2250
+F 0 "#PWR0105" H 5200 2000 50  0001 C CNN
+F 1 "GND" H 5205 2077 50  0000 C CNN
+F 2 "" H 5200 2250 50  0001 C CNN
+F 3 "" H 5200 2250 50  0001 C CNN
+	1    5200 2250
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 5B94F47E
-P 6100 3400
-F 0 "J3" H 6073 3280 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 6073 3371 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6100 3400 50  0001 C CNN
-F 3 "~" H 6100 3400 50  0001 C CNN
-	1    6100 3400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5900 3300 5250 3300
-$Comp
-L power:GND #PWR0106
-U 1 1 5B94F6C6
-P 5900 3400
-F 0 "#PWR0106" H 5900 3150 50  0001 C CNN
-F 1 "GND" V 5905 3272 50  0000 R CNN
-F 2 "" H 5900 3400 50  0001 C CNN
-F 3 "" H 5900 3400 50  0001 C CNN
-	1    5900 3400
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 5B94F7B6
-P 5400 3500
-F 0 "R1" V 5193 3500 50  0000 C CNN
-F 1 "2K2" V 5284 3500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5330 3500 50  0001 C CNN
-F 3 "~" H 5400 3500 50  0001 C CNN
-	1    5400 3500
-	0    1    1    0   
+P 5050 2400
+F 0 "R1" V 4843 2400 50  0000 C CNN
+F 1 "2K2" V 4934 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4980 2400 50  0001 C CNN
+F 3 "~" H 5050 2400 50  0001 C CNN
+	1    5050 2400
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5250 3600 5650 3600
-Wire Wire Line
-	5650 3600 5650 3500
-Wire Wire Line
-	5650 3500 5550 3500
 $Comp
 L power:GND #PWR0107
 U 1 1 5B94FA64
@@ -213,7 +139,6 @@ F 3 "" H 5650 3600 50  0001 C CNN
 	1    5650 3600
 	1    0    0    -1  
 $EndComp
-Connection ~ 5650 3600
 $Comp
 L Device:R R2
 U 1 1 5B94FAFA
@@ -355,4 +280,83 @@ Text Label 1950 4050 0    50   ~ 0
 5V
 Text Label 2550 4050 0    50   ~ 0
 5V_S
+$Comp
+L pspice:CAP C4
+U 1 1 5B955D36
+P 2850 2900
+F 0 "C4" V 2535 2900 50  0000 C CNN
+F 1 "CAP" V 2626 2900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2850 2900 50  0001 C CNN
+F 3 "" H 2850 2900 50  0001 C CNN
+	1    2850 2900
+	0    1    1    0   
+$EndComp
+Connection ~ 3100 2900
+$Comp
+L power:GND #PWR0106
+U 1 1 5B955DB6
+P 2600 2900
+F 0 "#PWR0106" H 2600 2650 50  0001 C CNN
+F 1 "GND" V 2605 2772 50  0000 R CNN
+F 2 "" H 2600 2900 50  0001 C CNN
+F 3 "" H 2600 2900 50  0001 C CNN
+	1    2600 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L RF_Module:ESP-12F U1
+U 1 1 5B99B295
+P 4450 3150
+F 0 "U1" H 4000 3950 50  0000 C CNN
+F 1 "ESP-12F" H 4750 3950 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 4450 3150 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 4100 3250 50  0001 C CNN
+	1    4450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 5B99B4CA
+P 5400 2050
+F 0 "J1" V 5460 2290 50  0000 L CNN
+F 1 "Conn_01x05_Male" V 5551 2290 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5400 2050 50  0001 C CNN
+F 3 "~" H 5400 2050 50  0001 C CNN
+	1    5400 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5B99B61B
+P 4450 3850
+F 0 "#PWR0111" H 4450 3600 50  0001 C CNN
+F 1 "GND" H 4455 3677 50  0000 C CNN
+F 2 "" H 4450 3850 50  0001 C CNN
+F 3 "" H 4450 3850 50  0001 C CNN
+	1    4450 3850
+	1    0    0    -1  
+$EndComp
+Text Label 4450 2350 2    50   ~ 0
+3V3
+Wire Wire Line
+	5050 3450 5650 3450
+Wire Wire Line
+	5650 3450 5650 3600
+Text Label 5050 2750 0    50   ~ 0
+3V3
+Connection ~ 5050 2550
+Text Label 5050 2250 2    50   ~ 0
+3V3
+Wire Wire Line
+	5050 2650 5300 2650
+Wire Wire Line
+	5300 2650 5300 2250
+Wire Wire Line
+	5050 2750 5400 2750
+Wire Wire Line
+	5400 2750 5400 2250
+Wire Wire Line
+	5500 2550 5500 2250
+Wire Wire Line
+	5050 2550 5500 2550
 $EndSCHEMATC

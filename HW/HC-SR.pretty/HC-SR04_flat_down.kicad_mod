@@ -1,4 +1,4 @@
-(module HC-SR04_flat_down (layer F.Cu) (tedit 5B996FCA)
+(module HC-SR04_flat_down (layer F.Cu) (tedit 5B9AA01F)
   (attr smd)
   (fp_text reference REF** (at 44 -21) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -29,8 +29,8 @@
   (pad 2 smd rect (at 21.209 5.08) (size 1.2 6) (layers F.Cu F.Paste F.Mask))
   (pad 1 smd rect (at 18.669 5.08) (size 1.2 6) (layers F.Cu F.Paste F.Mask))
   (model "${KIPRJMOD}/HC-SR.pretty/User Library-HC-SR04.STEP"
-    (offset (xyz 45 0 -5))
+    (offset (xyz 45.25 0 -5.5))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 180 0))
+    (rotate (xyz 180 0 180))
   )
 )

@@ -3,6 +3,7 @@
 #include <ESP8266WiFiMulti.h>
 #include <ESP8266mDNS.h>
 #include <ESP8266WebServer.h>
+#include <Esp.h>
 
 ESP8266WiFiMulti wifiMulti;     // Create an instance of the ESP8266WiFiMulti class, called 'wifiMulti'
 
@@ -30,9 +31,14 @@ void setup(void) {
 
   Serial.println("Connecting ...");
   int i = 0;
+  while (1)
+  {
+    ESP.restart();
+    Serial.println("wake \n");
+  }
   while (wifiMulti.run() != WL_CONNECTED) { // Wait for the Wi-Fi to connect: scan for Wi-Fi networks, and connect to the strongest of the networks above
     delay(250);
-    Serial.print('.');
+    Serial.print(".*");
   }
   Serial.println('\n');
   Serial.print("Connected to ");

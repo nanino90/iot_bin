@@ -31,9 +31,10 @@ void setup(void) {
 
   Serial.println("Connecting ...");
   int i = 0;
-  while (1)
+  //while (1)
   {
-    ESP.restart();
+    //ESP.deepSleep(1000000, RF_DEFAULT);
+    //ESP.restart();
     Serial.println("wake \n");
   }
   while (wifiMulti.run() != WL_CONNECTED) { // Wait for the Wi-Fi to connect: scan for Wi-Fi networks, and connect to the strongest of the networks above

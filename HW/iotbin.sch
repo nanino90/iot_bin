@@ -32,29 +32,16 @@ Wire Wire Line
 Text Label 6900 3050 0    50   ~ 0
 5V_S
 $Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 5B94DC1E
-P 1600 1600
-F 0 "J2" V 1660 1640 50  0000 L CNN
-F 1 "Conn_01x02_Male" V 1751 1640 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1600 1600 50  0001 C CNN
-F 3 "~" H 1600 1600 50  0001 C CNN
-	1    1600 1600
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR0102
 U 1 1 5B94DC90
-P 1500 1800
-F 0 "#PWR0102" H 1500 1550 50  0001 C CNN
-F 1 "GND" H 1505 1627 50  0000 C CNN
-F 2 "" H 1500 1800 50  0001 C CNN
-F 3 "" H 1500 1800 50  0001 C CNN
-	1    1500 1800
+P 1200 2000
+F 0 "#PWR0102" H 1200 1750 50  0001 C CNN
+F 1 "GND" H 1205 1827 50  0000 C CNN
+F 2 "" H 1200 2000 50  0001 C CNN
+F 3 "" H 1200 2000 50  0001 C CNN
+	1    1200 2000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 1800 1600 2050
 $Comp
 L power:GND #PWR0104
 U 1 1 5B94E6E3
@@ -103,17 +90,6 @@ F 1 "GND" H 5655 3427 50  0000 C CNN
 F 2 "" H 5650 3600 50  0001 C CNN
 F 3 "" H 5650 3600 50  0001 C CNN
 	1    5650 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5B94FAFA
-P 3850 2300
-F 0 "R2" V 3643 2300 50  0000 C CNN
-F 1 "10K" V 3734 2300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3780 2300 50  0001 C CNN
-F 3 "~" H 3850 2300 50  0001 C CNN
-	1    3850 2300
 	1    0    0    -1  
 $EndComp
 Text Label 4450 2350 0    50   ~ 0
@@ -171,17 +147,6 @@ Wire Wire Line
 Connection ~ 2400 2050
 Wire Wire Line
 	2400 2050 2450 2050
-$Comp
-L Device:Jumper JP1
-U 1 1 5B955656
-P 2250 4050
-F 0 "JP1" H 2250 4314 50  0000 C CNN
-F 1 "Jumper" H 2250 4223 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2250 4050 50  0001 C CNN
-F 3 "~" H 2250 4050 50  0001 C CNN
-	1    2250 4050
-	1    0    0    -1  
-$EndComp
 Text Label 1950 4050 0    50   ~ 0
 5V
 Text Label 2550 4050 0    50   ~ 0
@@ -220,7 +185,7 @@ F 3 "" H 4450 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5050 3450 5650 3450
+	5050 3450 5350 3450
 Wire Wire Line
 	5650 3450 5650 3600
 Text Label 5050 2750 0    50   ~ 0
@@ -305,8 +270,6 @@ Text Label 6800 3400 0    50   ~ 0
 Trig
 Text Label 6700 3400 2    50   ~ 0
 Echo
-Text Label 3850 3450 2    50   ~ 0
-Echo
 Text Label 3850 3350 2    50   ~ 0
 Trig
 $Comp
@@ -324,8 +287,6 @@ Wire Wire Line
 	5050 2550 5050 2400
 Text Label 3850 2150 2    50   ~ 0
 3V3
-Wire Wire Line
-	3850 2450 3850 2550
 $Comp
 L Device:R R3
 U 1 1 5B9B241A
@@ -351,48 +312,104 @@ Wire Wire Line
 	3250 3550 3250 3250
 Wire Wire Line
 	3250 3250 3850 3250
+Text Label 3850 2550 2    50   ~ 0
+RST
+Text Label 5050 3550 0    50   ~ 0
+RST
 $Comp
-L Mechanical:MountingHole MH1
-U 1 1 5B9B52FB
-P 2450 1400
-F 0 "MH1" H 2550 1446 50  0000 L CNN
-F 1 "MountingHole" H 2550 1355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2450 1400 50  0001 C CNN
-F 3 "~" H 2450 1400 50  0001 C CNN
-	1    2450 1400
+L Device:Battery BT1
+U 1 1 5BA04AE3
+P 1200 1800
+F 0 "BT1" H 1308 1846 50  0000 L CNN
+F 1 "Battery" H 1308 1755 50  0000 L CNN
+F 2 "Battery:Battery_AAAx3_no_hole" V 1200 1860 50  0001 C CNN
+F 3 "~" V 1200 1860 50  0001 C CNN
+	1    1200 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1550 1200 1550
+Wire Wire Line
+	1200 1550 1200 1600
+Wire Wire Line
+	1600 1550 1600 2050
+Text Label 3450 3350 2    50   ~ 0
+Echo
+$Comp
+L Device:R R2
+U 1 1 5BA06E77
+P 3450 3500
+F 0 "R2" H 3520 3546 50  0000 L CNN
+F 1 "1K" H 3520 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3380 3500 50  0001 C CNN
+F 3 "~" H 3450 3500 50  0001 C CNN
+	1    3450 3500
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole MH2
-U 1 1 5B9B53C3
-P 2700 1400
-F 0 "MH2" H 2800 1446 50  0000 L CNN
-F 1 "MountingHole" H 2800 1355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2700 1400 50  0001 C CNN
-F 3 "~" H 2700 1400 50  0001 C CNN
-	1    2700 1400
+L Device:R R4
+U 1 1 5BA06EF1
+P 3450 3800
+F 0 "R4" H 3520 3846 50  0000 L CNN
+F 1 "2K" H 3520 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3380 3800 50  0001 C CNN
+F 3 "~" H 3450 3800 50  0001 C CNN
+	1    3450 3800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole MH3
-U 1 1 5B9B53F7
-P 2950 1400
-F 0 "MH3" H 3050 1446 50  0000 L CNN
-F 1 "MountingHole" H 3050 1355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2950 1400 50  0001 C CNN
-F 3 "~" H 2950 1400 50  0001 C CNN
-	1    2950 1400
+L power:GND #PWR01
+U 1 1 5BA06F3D
+P 3450 3950
+F 0 "#PWR01" H 3450 3700 50  0001 C CNN
+F 1 "GND" H 3455 3777 50  0000 C CNN
+F 2 "" H 3450 3950 50  0001 C CNN
+F 3 "" H 3450 3950 50  0001 C CNN
+	1    3450 3950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3450 3650 3700 3650
+Wire Wire Line
+	3700 3650 3700 3450
+Wire Wire Line
+	3700 3450 3850 3450
+Connection ~ 3450 3650
 $Comp
-L Mechanical:MountingHole MH4
-U 1 1 5B9B542D
-P 3200 1400
-F 0 "MH4" H 3300 1446 50  0000 L CNN
-F 1 "MountingHole" H 3300 1355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 3200 1400 50  0001 C CNN
-F 3 "~" H 3200 1400 50  0001 C CNN
-	1    3200 1400
-	1    0    0    -1  
+L Device:R R5
+U 1 1 5BA095E6
+P 2300 4050
+F 0 "R5" H 2370 4096 50  0000 L CNN
+F 1 "0" H 2370 4005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2230 4050 50  0001 C CNN
+F 3 "~" H 2300 4050 50  0001 C CNN
+	1    2300 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 4050 2450 4050
+Wire Wire Line
+	2150 4050 1950 4050
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5BA0426C
+P 5250 3250
+F 0 "J2" H 5223 3130 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 5223 3221 50  0000 R CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 5250 3250 50  0001 C CNN
+F 3 "~" H 5250 3250 50  0001 C CNN
+	1    5250 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BA0461F
+P 5500 3450
+F 0 "R6" V 5600 3350 50  0000 C CNN
+F 1 "10K" V 5500 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5430 3450 50  0001 C CNN
+F 3 "~" H 5500 3450 50  0001 C CNN
+	1    5500 3450
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
